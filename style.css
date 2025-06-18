@@ -82,7 +82,7 @@ body {
 
 .hero h1 {
   font-size: 42px;
-  margin-bottom: 10px;
+  margin-bottom: 5px;
 }
 
 .highlight {
@@ -90,7 +90,7 @@ body {
 }
 
 .hero h2 {
-  font-size: 24px;
+  font-size: 18px;
   margin-bottom: 20px;
   color: #cccccc;
 }
@@ -514,8 +514,28 @@ a.btn:hover {
         font-weight: 500;
       }
 
-.certificate-item img {
-  width: 100%;
-  height: auto;
-  border-radius: 8px;
-}
+      .certificate-item img {
+        width: 100%;
+        height: auto;
+        border-radius: 8px;
+      }
+
+      .social-links {
+        margin-top: 10px;
+      }
+
+      .social-links a {
+        margin: 0 10px;
+        font-size: 24px;
+        text-decoration: none;
+        transition: opacity 0.3s;
+      }
+
+      .social-links a:hover {
+        opacity: 0.7;
+      }
+
+      .social-links img {
+        height: 30px;
+        width: 30px;
+      }
