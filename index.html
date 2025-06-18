@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Portfolio</title>
+    <link rel="icon" href="logo.png" type="image/png" />
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2DhKNF+QH3RjKzTj7uK4vxO6zLvQ9RXxwL4Kn+K5f5mR1+jpFcFQ0k1tO1xvPBu0A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@2.6.4/dist/email.min.js"></script>
+    <script>
+      (function(){
+        emailjs.init("g6bdIKbawT_qBVnrT");
+      })();
+    </script>
+  </head>
+  <body>
+    <header class="header">
+      <nav class="navbar">
+        <div class="logo">
+          <img src="logo.png" alt="logo">
+        </div>
+        <img
+          src="menu.png"
+          alt="Open menu"
+          class="hamburger-icon"
+          id="menuIcon"
+          tabindex="0"
+          role="button"
+          aria-label="Open navigation menu"
+          onkeydown="handleMenuKey(event)"
+          onclick="toggleMenu()"
+        />
+        <img
+          src="close.png"
+          alt="Close menu"
+          class="hamburger-icon"
+          id="closeIcon"
+          tabindex="0"
+          role="button"
+          aria-label="Close navigation menu"
+          onkeydown="handleMenuKey(event)"
+          onclick="toggleMenu()"
+          style="display: none;"
+        />
+        <ul class="nav-links" id="navLinks">
+          <li><a href="#about">About Me</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#certification">Certification</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <section class="hero">
+      <h1>I’m <span class="highlight"></span></h1>
+      <h2>Mobile Developer</h2>
+      <button class="btn">My Projects</button>
+      <a href="cv.pdf" download class="btn" style="margin-left: 5px;">Download CV</a>
+    </section>
+
+    <section id="about" class="about">
+      <div class="about-text">
+        <h2>WHO AM I?</h2>
+        <p>
+          I am an Informatics Engineering student at Universitas Serang Raya with a strong passion for mobile development. I have experience developing Android applications, including a project called SmartFarm that helps farmers monitor crops and weather. In addition to my technical skills, I was honored to serve as a Campus Ambassador, which helped me improve my communication and leadership abilities.
+        </p>
+      </div>
+      <div class="about-photo">
+        <img src="user.jpg" alt="My Photo">
+      </div>
+    </section>
+
+    <section id="skills" class="skills">
+      <h2>MY SKILLS</h2>
+      <div class="skills-grid icons-only">
+        <div class="skill-item"><img src="illustrator.png" alt="Adobe Illustrator" /><p>Adobe Illustrator</p></div>
+        <div class="skill-item"><img src="canva.png" alt="Canva" /><p>Canva</p></div>
+        <div class="skill-item"><img src="figma.png" alt="Figma" /><p>Figma</p></div>
+        <div class="skill-item"><img src="kotlin.png" alt="Kotlin" /><p>Kotlin</p></div>
+        <div class="skill-item"><img src="java.png" alt="Java" /><p>Java</p></div>
+        <div class="skill-item"><img src="android.png" alt="Android Studio " /><p>Android Studio</p></div>
+      </div>
+    </section>
+
+    <section id="projects" class="projects">
+      <h2>PROJECTS</h2>
+      <div class="project-list">
+        <div class="project-card-horizontal">
+          <div class="project-description">
+            <h3>UI/UX Smart Farm</h3>
+            <p>Designing a user-friendly interface for a smart agriculture monitoring system to support farmers in managing their crops effectively.</p>
+            <a href="https://www.figma.com/design/yPt8RxPFGf3kCVir7NXl8d/UI-Smart-Farm?node-id=0-1&t=Vx36ERsNq0wGBjZJ-1">Click here to see more details!</a>
+          </div>
+          <div class="project-image">
+            <img src="Smartfarm1.png" alt="UI/UX Smart Farm">
+          </div>
+        </div>
+        <div class="project-card-horizontal">
+          <div class="project-description">
+            <h3>UI/UX Looka Food</h3>
+            <p>A clean and modern food delivery UI/UX design tailored for seamless user experience and quick access to favorite meals.</p>
+            <a href="https://www.figma.com/design/yPt8RxPFGf3kCVir7NXl8d/UI-Smart-Farm?node-id=0-1&t=Vx36ERsNq0wGBjZJ-1">Click here to see more details!</a>
+          </div>
+          <div class="project-image">
+            <img src="Looka1.png" alt="UI/UX Looka Food">
+          </div>
+        </div>
+        <div class="project-card-horizontal">
+          <div class="project-description">
+            <h3>Aplikasi Smart Farm</h3>
+            <p>An Android application that empowers Indonesian farmers by providing weather forecasting and crop monitoring functionalities.</p>
+            <a href="https://www.figma.com/design/yPt8RxPFGf3kCVir7NXl8d/UI-Smart-Farm?node-id=0-1&t=Vx36ERsNq0wGBjZJ-1">Click here to see more details!</a>
+          </div>
+          <div class="project-image">
+            <img src="Serabank1.png" alt="SeraBank">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="certification" class="certification">
+      <h2>CERTIFICATIONS</h2>
+      <div class="certification-gallery">
+        <div class="certificate-item">
+          <img src="git_certificate.png" alt="Belajar Dasar Git dengan GitHub">
+          <p>Belajar Dasar Git dengan GitHub</p>
+        </div>
+        <div class="certificate-item">
+          <img src="android_intermediate.png" alt="Belajar Pengembangan Aplikasi Android Intermediate">
+          <p>Belajar Pengembangan Aplikasi Android Intermediate</p>
+        </div>
+        <div class="certificate-item">
+          <img src="bangkit_certificate.png" alt="Sertifikat Lulusan Bangkit">
+          <p>Sertifikat Lulusan Bangkit</p>
+        </div>
+        <div class="certificate-item">
+          <img src="bangkit_transcript.png" alt="Final Transcript Bangkit">
+          <p>Final Transcript Bangkit</p>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <h2>Let’s Have a Chat</h2>
+      <form class="contact-form" id="contact-form">
+        <input type="text" name="name" placeholder="Your Name" required />
+        <input type="email" name="email" placeholder="Your Email" required />
+        <textarea name="message" placeholder="Your Message" required></textarea>
+        <button type="submit">Submit</button>
+      </form>
+    </footer>
+
+    <script src="script.js"></script>
+    <div id="toast" class="toast"></div>
+    <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+      <img id="lightbox-img" src="" alt="Preview">
+    </div>
+  </body>
+</html>
