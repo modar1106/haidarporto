@@ -11,7 +11,7 @@
     <script src="https://cdn.jsdelivr.net/npm/emailjs-com@2.6.4/dist/email.min.js"></script>
     <script>
       (function(){
-        emailjs.init("g6bdIKbawT_qBVnrT");
+        emailjs.init("g6bdIKbawT_qBVnrT"); // Pastikan ini adalah user ID EmailJS Anda
       })();
     </script>
   </head>
@@ -19,7 +19,7 @@
     <header class="header">
       <nav class="navbar">
         <div class="logo">
-          <img src="logo.png" alt="logo">
+          <a href="./"><img src="logo.png" alt="logo"></a>
         </div>
         <img
           src="menu.png"
@@ -29,8 +29,6 @@
           tabindex="0"
           role="button"
           aria-label="Open navigation menu"
-          onkeydown="handleMenuKey(event)"
-          onclick="toggleMenu()"
         />
         <img
           src="close.png"
@@ -40,8 +38,6 @@
           tabindex="0"
           role="button"
           aria-label="Close navigation menu"
-          onkeydown="handleMenuKey(event)"
-          onclick="toggleMenu()"
           style="display: none;"
         />
         <ul class="nav-links" id="navLinks">
@@ -96,57 +92,74 @@
       <h2>PROJECTS</h2>
       <div class="project-list">
         <div class="project-card-horizontal">
-          <div class="project-description">
-            <h3>UI/UX Smart Farm</h3>
-            <p>Designing a user-friendly interface for a smart agriculture monitoring system to support farmers in managing their crops effectively.</p>
-            <a href="https://www.figma.com/design/yPt8RxPFGf3kCVir7NXl8d/UI-Smart-Farm?node-id=0-1&t=Vx36ERsNq0wGBjZJ-1">Click here to see more details!</a>
+          <div class="project-image">
+            <img src="Smartfarm1.png" alt="SmartFarm">
           </div>
+          <div class="project-description">
+            <h3>SmartFarm App</h3>
+            <p>An Android application designed to empower farmers by providing real-time weather monitoring and crop condition insights. This solution aims to help farmers make better planting decisions, thereby minimizing the risk of crop failure.</p>
+            <a href="https://drive.google.com/file/d/1ODW4KZaYlDh1bUm6ZihjGaafz06oCOyG/view?usp=drive_link" target="_blank">Click here to download the App!(Android user only)</a>
+          </div>
+        </div>
+        <div class="project-card-horizontal">
           <div class="project-image">
             <img src="Smartfarm1.png" alt="UI/UX Smart Farm">
           </div>
+          <div class="project-description">
+            <h3>UI/UX Smart Farm</h3>
+            <p>Designing a user-friendly interface for a smart agriculture monitoring system to support farmers in managing their crops.</p>
+            <a href="https://www.figma.com/proto/yPt8RxPFGf3kCVir7NXl8d/UI-Smart-Farm?page-id=&node-id=82-362&p=f&viewport=545%2C391%2C0.14&t=JsnOvi6MY3LQY3PW-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=1%3A3" target="_blank">Click here to see the result!</a>
+          </div>
         </div>
         <div class="project-card-horizontal">
-          <div class="project-description">
-            <h3>UI/UX Looka Food</h3>
-            <p>A clean and modern food delivery UI/UX design tailored for seamless user experience and quick access to favorite meals.</p>
-            <a href="https://www.figma.com/design/yPt8RxPFGf3kCVir7NXl8d/UI-Smart-Farm?node-id=0-1&t=Vx36ERsNq0wGBjZJ-1">Click here to see more details!</a>
-          </div>
           <div class="project-image">
             <img src="Looka1.png" alt="UI/UX Looka Food">
           </div>
+          <div class="project-description">
+            <h3>UI/UX Looka Food</h3>
+            <p>A clean and modern food delivery UI/UX design tailored for seamless user experience and quick access to favorite meals.</p>
+            <a href="https://www.figma.com/proto/cK8nPnCjJGi4O1eTrJPXJn/Looka-Food?page-id=0%3A1&node-id=18-24&p=f&viewport=745%2C-39299%2C4.14&t=Akb3Rbyuzxh6popF-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=1%3A2&show-proto-sidebar=1" target="_blank">Click here to see the result!</a>
+          </div>
         </div>
         <div class="project-card-horizontal">
-          <div class="project-description">
-            <h3>Aplikasi Smart Farm</h3>
-            <p>An Android application that empowers Indonesian farmers by providing weather forecasting and crop monitoring functionalities.</p>
-            <a href="https://www.figma.com/design/yPt8RxPFGf3kCVir7NXl8d/UI-Smart-Farm?node-id=0-1&t=Vx36ERsNq0wGBjZJ-1">Click here to see more details!</a>
-          </div>
           <div class="project-image">
             <img src="Serabank1.png" alt="SeraBank">
           </div>
+          <div class="project-description">
+            <h3>UI/UX SeraBank</h3>
+            <p>Designing an intuitive user experience and a modern visual interface for a digital banking application, aiming to simplify financial transactions and enhance accessibility to banking services for users.</p>
+            <a href="https://www.figma.com/proto/hdSxjiEEWOevnDMsKEd5SM/Design-Mohamad-Haidar?page-id=0%3A1&node-id=12-5&p=f&viewport=340%2C359%2C0.16&t=lBaIjCnitgT1GH7N-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=1%3A10" target="_blank">Click here to see the result!</a>
+          </div>
         </div>
+        
       </div>
     </section>
 
     <section id="certification" class="certification">
       <h2>CERTIFICATIONS</h2>
-      <div class="certification-gallery">
-        <div class="certificate-item">
-          <img src="git_certificate.png" alt="Belajar Dasar Git dengan GitHub">
-          <p>Belajar Dasar Git dengan GitHub</p>
-        </div>
-        <div class="certificate-item">
-          <img src="android_intermediate.png" alt="Belajar Pengembangan Aplikasi Android Intermediate">
-          <p>Belajar Pengembangan Aplikasi Android Intermediate</p>
-        </div>
-        <div class="certificate-item">
-          <img src="bangkit_certificate.png" alt="Sertifikat Lulusan Bangkit">
-          <p>Sertifikat Lulusan Bangkit</p>
-        </div>
-        <div class="certificate-item">
-          <img src="bangkit_transcript.png" alt="Final Transcript Bangkit">
-          <p>Final Transcript Bangkit</p>
-        </div>
+      <div class="carousel-container">
+        <div class="carousel-track">
+          <div class="certificate-item">
+            <img src="git_certificate.png" alt="Belajar Dasar Git dengan GitHub">
+            <p>Belajar Dasar Git dengan GitHub</p>
+          </div>
+          <div class="certificate-item">
+            <img src="android_intermediate.png" alt="Belajar Pengembangan Aplikasi Android Intermediate">
+            <p>Belajar Pengembangan Aplikasi Android Intermediate</p>
+          </div>
+          <div class="certificate-item">
+            <img src="bangkit_certificate.png" alt="Sertifikat Lulusan Bangkit">
+            <p>Sertifikat Lulusan Bangkit</p>
+          </div>
+          <div class="certificate-item">
+            <img src="bangkit_transcript.png" alt="Final Transcript Bangkit">
+            <p>Final Transcript Bangkit</p>
+          </div>
+          </div>
+        <button class="carousel-button prev">&#10094;</button>
+        <button class="carousel-button next">&#10095;</button>
+        <div class="carousel-dots">
+          </div>
       </div>
     </section>
 
@@ -162,7 +175,7 @@
 
     <script src="script.js"></script>
     <div id="toast" class="toast"></div>
-    <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+    <div id="lightbox" class="lightbox">
       <img id="lightbox-img" src="" alt="Preview">
     </div>
   </body>
