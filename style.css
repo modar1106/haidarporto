@@ -28,8 +28,8 @@ body {
   align-items: center;
 }
 
-.logo img{
-  height: 40px;
+.logo img {
+  height: 20px;
   color: #ffffff;
 }
 
@@ -68,17 +68,25 @@ body {
 .hero {
   padding: 300px 40px 350px;
   text-align: center;
+  position: relative;
 }
 
-.btn{
-  transition: transform 0.3s ease;    
+/* Menggabungkan properti btn */
+.btn {
+  display: inline-block;
+  padding: 12px 24px;
+  background-color: #00ffd5;
+  border: none;
+  font-weight: bold;
+  color: #000;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
 }
 
-.btn:hover{
-    transform: scale(1.05);
+.btn:hover {
+  transform: scale(1.05);
 }
-
-
 
 .hero h1 {
   font-size: 42px;
@@ -95,108 +103,95 @@ body {
   color: #cccccc;
 }
 
-.hero a{
-    font-size: 12px;
-    text-decoration: none;
-    transition: transform 0.3s ease;
-}
-
-a.btn {
-  display: inline-block;
-  padding: 10px 20px;
-  color: black;
-  border: none;
-  text-decoration: none;
+/* Menggabungkan properti a di dalam hero */
+.hero a {
   font-size: 12px;
-  transition: transform 0.2s ease;
+  text-decoration: none;
+  transition: transform 0.3s ease;
 }
 
-a.btn:hover {
-  transform:scale(1.05);
+/* Menggabungkan properti .about */
+.about {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px; /* Nilai yang disatukan dari duplikasi */
+  gap: 30px; /* Nilai yang disatukan dari duplikasi */
+  padding-top: 100px;
 }
 
-
-.hero a:hover{
-    transform: scale(1.05);
+/* Menggabungkan properti .about-text */
+.about-text {
+  flex: 1 1 300px;
+  max-width: 500px;
+  text-align: left;
 }
 
-.btn {
-  padding: 12px 24px;
-  background-color: #00ffd5;
-  border: none;
-  font-weight: bold;
-  color: #000;
-  border-radius: 8px;
-  cursor: pointer;
+/* Menggabungkan properti h2 di dalam about-text */
+.about-text h2 {
+  font-size: 28px;
+  margin-bottom: 10px; /* Nilai yang disatukan dari duplikasi */
 }
 
-.about, .skills, .projects, .footer {
-  padding: 80px 40px;
+/* Menggabungkan properti p di dalam about-text */
+.about-text p {
+  font-size: 16px;
+  line-height: 1.6;
+  text-align: justify;
+}
+
+/* Menggabungkan properti .about-photo */
+.about-photo {
+  flex: 1 1 300px;
+  max-width: 500px;
+  display: flex;
+  justify-content: center;
+}
+
+/* Menggabungkan properti img di dalam about-photo */
+.about-photo img {
+  max-width: 300px;
+  width: 100%;
+  height: auto;
+  border-radius: 50%;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.about-photo img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Menggabungkan properti skills-grid */
+.skills-grid {
+  display: grid;
+  /* Ubah atau tambahkan properti ini untuk 3 kolom di desktop */
+  grid-template-columns: repeat(3, 1fr); /* Pastikan 3 kolom di desktop */
+  gap: 1rem;
+  max-width: 900px; /* Batasi lebar maksimal grid agar 3 kolom tetap proporsional */
+  margin: 1.5rem auto; /* Memusatkan grid dan menambah margin top */
+  padding: 0 20px; /* Beri sedikit padding horizontal */
+}
+
+.skills h2{
   text-align: center;
 }
 
-.about p {
-  max-width: 700px;
-  margin: 20px auto;
-  color: #dddddd;
-}
-
-.about {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 60px 10%;
-      gap: 40px;
-    }
-
-    .about-text {
-      flex: 1;
-      text-align: left;
-    }
-
-    .about-text h2 {
-      font-size: 28px;
-      margin-bottom: 20px;
-    }
-
-    .about-text p {
-      font-size: 16px;
-      line-height: 1.6;
-    }
-
-    .about-photo {
-      flex: 1;
-      display: flex;
-      justify-content: center;
-    }
-
-    .about-photo img {
-      max-width: 300px;
-      width: 100%;
-      height: auto;
-      border-radius: 50%;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-
-    .about-photo img:hover {
-      transform: scale(1.05);
-      box-shadow: 0 6px 20px rgba(0,0,0,0.2);
-    }
-
-.skills-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr); /* 2 kolom */
-  gap: 20px;
-  max-width: 500px;
-  margin: auto;
-}
-
+/* Menggabungkan properti skill-item */
 .skill-item {
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
+  background-color: #1a2a3a;
+  padding: 1rem;
+  font-weight: 600;
+  border-radius: 10px;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  justify-content: center;
+  gap: 0.5rem;
 }
 
 .skill-item img {
@@ -204,148 +199,6 @@ a.btn:hover {
   height: 60px;
   object-fit: contain;
   margin-bottom: 8px;
-}
-
-.project-list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  justify-content: center;
-  margin-top: 30px;
-}
-
-.project-card {
-  background: #1a2a3a;
-  width: 250px;
-  padding: 20px;
-  border-radius: 10px;
-  color: #fff;
-  box-shadow: 0 0 10px rgba(0, 255, 213, 0.2);
-  transition: transform 0.3s ease;
-}
-
-.project-card:hover {
-  transform: translateY(-5px);
-}
-
-    .project-list {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 20px;
-      justify-content: center;
-    }
-    .project-card {
-      width: 300px;
-      border-radius: 16px;
-      overflow: hidden;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-    .project-card img {
-      width: 100%;
-      display: block;
-      object-fit: cover;
-    }
-    .project-card:hover {
-      transform: scale(1.05);
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-    }
-    .project-card-horizontal:hover{
-        transform: scale(1.02);
-    }
-    .project-card-horizontal {
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      justify-content: space-between;
-      margin-bottom: 40px;
-      background-color: #1a2a3a;
-      border-radius: 12px;
-      padding: 20px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-      transition: transform 0.3s ease;
-    }
-
-    .project-description {
-      flex: 1;
-      padding-right: 20px;
-      text-align: start;
-    }
-
-    .project-card-horizontal a{
-        text-decoration: none;
-        color: #00c4a8;
-    }
-
-    .project-image {
-      flex: 1;
-      display: flex;
-      justify-content: center;
-    }
-
-    .project-image img {
-      max-width: 100%;
-      height: auto;
-      border-radius: 10px;
-      transition: transform 0.3s ease;
-    }
-
-    .project-image img:hover {
-      transform: scale(1.05);
-    }
-    
-.footer h2 {
-  margin-bottom: 20px;
-}
-
-.contact-form {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 15px;
-  max-width: 500px;
-  margin: 0 auto;
-}
-
-.contact-form input,
-.contact-form textarea {
-  width: 100%;
-  padding: 10px;
-  border: none;
-  border-radius: 6px;
-}
-
-.contact-form button {
-  background: #00ffd5;
-  color: #000;
-  padding: 10px 20px;
-  font-weight: bold;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-}
-
-.contact-form button:hover {
-  background: #00c4a8;
-}
-.skills-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-  gap: 1rem;
-  margin-top: 1.5rem;
-}
-
-.skill-item {
-  background-color: #1a2a3a;
-  padding: 1rem;
-  text-align: center;
-  font-weight: 600;
-  border-radius: 10px;
-  transition: transform 0.3s ease, background-color 0.3s ease;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.5rem;
 }
 
 .skill-item i {
@@ -364,48 +217,240 @@ a.btn:hover {
   color: #fff;
 }
 
+/* Menggabungkan properti project-list */
+.project-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.projects h2{
+  text-align: center;
+  margin-top: 40px;
+}
+
+/* Menggabungkan properti project-card */
+/* project-card asli tidak digunakan dengan adanya project-card-horizontal,
+   jadi properti yang bertabrakan dihapus atau diintegrasikan ke project-card-horizontal */
+/* .project-card {
+  background: #1a2a3a;
+  width: 250px;
+  padding: 20px;
+  border-radius: 10px;
+  color: #fff;
+  box-shadow: 0 0 10px rgba(0, 255, 213, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+} */
+
+.project-card-horizontal {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 40px;
+  background-color: #1a2a3a;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+  width: 300px; /* Disesuaikan untuk tampilan awal */
+}
+
+.project-card-horizontal:hover {
+  transform: scale(1.02);
+}
+
+.project-description {
+  flex: 1;
+  padding-right: 0; /* Hapus padding-right karena flex-direction column */
+  text-align: start;
+}
+
+.project-card-horizontal a {
+  text-decoration: none;
+  color: #00c4a8;
+  font-size: 14px;
+}
+
+.project-card-horizontal p {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  cursor: pointer;
+}
+
+.project-card-horizontal p.expanded {
+  -webkit-line-clamp: unset;
+  overflow: visible;
+  text-overflow: unset;
+}
+
+/* Menggabungkan properti project-image */
+.project-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 15px; /* Tambahkan margin agar ada jarak dengan deskripsi */
+}
+
+/* Menggabungkan properti img di dalam project-image */
+.project-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+.project-image img:hover {
+  transform: scale(1.05);
+}
+
+/* Bagian Footer */
+.footer {
+  padding: 80px 40px; /* Pertahankan padding default untuk desktop */
+  text-align: center;
+}
+
+.footer h2 {
+  margin-bottom: 20px;
+  font-size: 2rem; /* Ukuran font yang lebih besar untuk judul */
+  font-weight: 600;
+}
+
+/* Bagian Contact Form */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  max-width: 500px; /* Batasi lebar maksimal form untuk desktop */
+  margin: 0 auto; /* Memusatkan form */
+  padding: 20px; /* Tambahkan sedikit padding di sekitar form itu sendiri */
+  background-color: rgba(0, 0, 0, 0.2); /* Sedikit background untuk visual */
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%; /* Pastikan elemen input dan textarea memenuhi lebar wadahnya */
+  padding: 12px 15px; /* Tambah padding agar lebih nyaman disentuh/diketik */
+  border: 1px solid rgba(255, 255, 255, 0.3); /* Tambahkan border ringan */
+  border-radius: 8px; /* Sudut lebih membulat */
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+  font-size: 1rem;
+  transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  color: #cccccc;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #00ffd5; /* Highlight border saat fokus */
+  background-color: rgba(255, 255, 255, 0.15);
+  outline: none; /* Hapus outline default browser */
+}
+
+.contact-form button {
+  background: #00ffd5;
+  color: #000;
+  padding: 12px 30px; /* Padding lebih besar untuk tombol */
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1.1rem;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.contact-form button:hover {
+  background: #00c4a8;
+  transform: translateY(-2px); /* Animasi hover sederhana */
+}
+
+/* Media Queries untuk Skills Grid (Responsif) */
+@media (max-width: 992px) { /* Misalnya, di bawah 992px, ubah menjadi 2 kolom */
+  .skills-grid {
+    grid-template-columns: repeat(2, 1fr); /* Ubah menjadi 2 kolom */
+    max-width: 600px; /* Sesuaikan lebar maksimal untuk 2 kolom */
+  }
+}
+
+@media (max-width: 576px) { /* Di bawah 576px, ubah menjadi 1 kolom */
+  .skills-grid {
+    grid-template-columns: repeat(1, 1fr); /* Ubah menjadi 1 kolom */
+    max-width: 300px; /* Sesuaikan lebar maksimal untuk 1 kolom */
+  }
+}
+
+/* Media Query untuk Responsif */
+@media (max-width: 768px) {
+  .footer {
+    padding: 60px 20px; /* Kurangi padding footer di mobile */
+  }
+
+  .footer h2 {
+    font-size: 1.8rem; /* Sesuaikan ukuran judul di mobile */
+  }
+
+  .contact-form {
+    max-width: 100%; /* Biarkan form memenuhi lebar layar mobile */
+    padding: 15px; /* Kurangi padding form di mobile */
+    margin: 0 10px; /* Beri sedikit margin horizontal agar tidak menempel sisi */
+  }
+
+  .contact-form input,
+  .contact-form textarea,
+  .contact-form button {
+    font-size: 0.95rem; /* Sedikit perkecil ukuran font di mobile */
+  }
+
+  .contact-form button {
+    padding: 10px 20px; /* Sesuaikan padding tombol di mobile */
+  }
+}
+
+@media (max-width: 480px) {
+  .footer {
+    padding: 40px 15px; /* Lebih kecil lagi di layar sangat kecil */
+  }
+
+  .footer h2 {
+    font-size: 1.6rem;
+  }
+
+  .contact-form {
+    margin: 0 5px; /* Margin lebih kecil lagi */
+  }
+}
+
+/* Animasi untuk ikon hamburger */
 .hamburger-icon {
   width: 28px;
   height: 28px;
   cursor: pointer;
   display: none; /* ditampilkan via media query */
-  transition: transform 0.3s ease;
+  transition: transform 0.3s ease; /* Transisi untuk rotasi */
 }
 
 .hamburger-icon:hover {
   transform: scale(1.1);
 }
 
-/* Tampilkan hamburger di ukuran layar kecil */
-@media (max-width: 768px) {
-  .hamburger-icon {
-    display: inline;
-  }
-
-  .nav-links {
-    display: none;
-    flex-direction: column;
-    background-color: #1a2a3a;
-    position: absolute;
-    top: 60px;
-    right: 20px;
-    padding: 15px;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  }
-
-  .nav-links.active {
-    display: flex;
-  }
-
-  .nav-links li {
-    text-align: center;
-    margin: 0.5rem 0;
-  }
-
-  .hamburger {
-    display: block;
-  }
+.hamburger-icon:active {
+  transform: scale(1.15); /* Sedikit membesar saat ditekan */
 }
 
 .toast {
@@ -457,6 +502,7 @@ a.btn:hover {
   cursor: zoom-out;
 }
 
+/* Menggabungkan properti .certification */
 .certification {
   padding: 60px 20px;
   text-align: center;
@@ -468,74 +514,165 @@ a.btn:hover {
   font-weight: 600;
 }
 
-.certificate-list {
+/* --- Carousel for Certification Section --- */
+.carousel-container {
+  position: relative;
+  max-width: 900px; /* Sesuaikan lebar maksimal carousel */
+  margin: 30px auto;
+  overflow: hidden; /* Penting untuk menyembunyikan item di luar tampilan */
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.carousel-track {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 20px;
+  transition: transform 0.5s ease-in-out;
+}
+
+/* Penyesuaian untuk certificate-item di dalam carousel */
+.carousel-track .certificate-item {
+  flex: 0 0 calc(33.333% - 20px); /* Tampilkan 3 item per slide dengan gap */
+  margin: 10px; /* Jarak antar item */
+  box-sizing: border-box; /* Pastikan padding dan border tidak menambah ukuran */
+  min-width: 200px; /* Minimal lebar item agar tidak terlalu kecil di layar kecil */
+  padding: 15px; /* Tetap pertahankan padding item */
+  border-radius: 10px; /* Tetap pertahankan border-radius item */
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08); /* Tetap pertahankan shadow item */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Tetap pertahankan transisi item */
+  cursor: pointer;
+  text-align: center; /* Pastikan teks di tengah */
 }
 
 .certificate-item {
-  padding: 15px;
-  border-radius: 10px;
-  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  max-width: 300px;
+  background-color: #1a2a3a;
+  transition: transform(0.3s);
+}
+
+.certificate-item:hover{
+  transform: scale(1.03);
+}
+
+/* Pastikan gambar tidak meluap */
+.carousel-track .certificate-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 8px; /* Pastikan gambar juga punya border-radius */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.carousel-track .certificate-item p {
+  margin-top: 10px;
+  font-weight: 500;
+}
+
+.carousel-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px 15px;
   cursor: pointer;
+  z-index: 10;
+  font-size: 1.5rem;
+  border-radius: 50%;
+  transition: background-color 0.3s ease;
 }
 
-.certificate-item:hover {
-  transform: scale(1.05);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+.carousel-button:hover {
+  background-color: rgba(0, 0, 0, 0.8);
 }
 
-      .certification-gallery {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 20px;
-        justify-content: center;
-      }
+.carousel-button.prev {
+  left: 10px;
+}
 
-      .certificate-item {
-        flex: 1 1 200px;
-        max-width: 250px;
-        text-align: center;
-      }
+.carousel-button.next {
+  right: 10px;
+}
 
-      .certificate-item img {
-        width: 100%;
-        height: auto;
-        border-radius: 8px;
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-      }
+.carousel-dots {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  gap: 10px;
+}
 
-      .certificate-item p {
-        margin-top: 10px;
-        font-weight: 500;
-      }
+.dot {
+  width: 12px;
+  height: 12px;
+  background-color: #555;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
 
-      .certificate-item img {
-        width: 100%;
-        height: auto;
-        border-radius: 8px;
-      }
+.dot.active {
+  background-color: #00ffd5;
+  transform: scale(1.2);
+}
 
-      .social-links {
-        margin-top: 10px;
-      }
+.social-links {
+  margin-top: 10px;
+}
 
-      .social-links a {
-        margin: 0 10px;
-        font-size: 24px;
-        text-decoration: none;
-        transition: opacity 0.3s;
-      }
+.social-links a {
+  margin: 0 10px;
+  font-size: 24px;
+  text-decoration: none;
+  transition: opacity 0.3s;
+}
 
-      .social-links a:hover {
-        opacity: 0.7;
-      }
+.social-links a:hover {
+  opacity: 0.7;
+}
 
-      .social-links img {
-        height: 30px;
-        width: 30px;
-      }
+.social-links img {
+  height: 30px;
+  width: 30px;
+}
+
+/* Media Query untuk Carousel (Responsive) */
+@media (max-width: 768px) {
+  .carousel-track .certificate-item {
+    flex: 0 0 calc(50% - 20px); /* Tampilkan 2 item per slide di tablet */
+  }
+
+  /* Tampilkan hamburger di ukuran layar kecil */
+  .hamburger-icon {
+    display: inline;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background-color: #1a2a3a;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .nav-links li {
+    text-align: center;
+    margin: 0.5rem 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .carousel-track .certificate-item {
+    flex: 0 0 calc(100% - 20px); /* Tampilkan 1 item per slide di mobile */
+  }
+  .carousel-button {
+    padding: 8px 12px;
+    font-size: 1.2rem;
+  }
+}
