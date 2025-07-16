@@ -1,5 +1,4 @@
-document.addEventListener('DOMContentLoaded', () => {
-  // --- Smooth Scroll ---
+document.addEventListener('DOMContentLoaded', () => {
   document.querySelectorAll('a[href^="#"]').forEach(link => {
     link.addEventListener('click', function(e) {
       e.preventDefault();
@@ -9,8 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   });
-
-  // --- Scroll to Projects section (via .btn) ---
+
   const heroBtn = document.querySelector('.hero .btn');
   if (heroBtn) {
     heroBtn.addEventListener('click', () => {
@@ -54,7 +52,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // --- Typing Effect on Name ---
   const nameSpan = document.querySelector('.hero .highlight');
   const nameText = "Mohamad Haidar";
   let index = 0;
@@ -70,8 +67,7 @@ document.addEventListener('DOMContentLoaded', () => {
     nameSpan.textContent = "";
     typeEffect();
   }
-
-  // --- Scroll Reveal Animation ---
+
   const revealElements = document.querySelectorAll('section');
 
   function revealOnScroll() {
@@ -92,13 +88,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
   window.addEventListener('scroll', revealOnScroll);
   window.addEventListener('load', revealOnScroll);
-
-  // --- Mobile Navigation Menu Toggle ---
+
   const hamburgerIcon = document.getElementById("menuIcon");
   const closeIcon = document.getElementById("closeIcon");
   const navLinks = document.getElementById("navLinks");
 
-  // --- Fungsi untuk Animasi Tombol Menu ---
+
   function animateMenuButton(iconElement, isOpening) {
     if (iconElement) {
       if (isOpening) {
@@ -174,8 +169,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   window.addEventListener("resize", handleResize);
   handleResize();
-
-  // --- Lightbox Preview for Certificates ---
+
   document.querySelectorAll('.certificate-item img').forEach(img => {
     img.addEventListener('click', () => {
       const lightbox = document.getElementById('lightbox');
@@ -195,15 +189,13 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   }
-
-  // --- Project Card Description Expansion ---
+
   document.querySelectorAll('.project-card-horizontal p').forEach(p => {
     p.addEventListener('click', () => {
       p.classList.toggle('expanded');
     });
   });
 
-  // --- Cursor Light Effect ---
   const light = document.createElement('div');
   light.className = 'cursor-light';
   document.body.appendChild(light);
@@ -212,8 +204,7 @@ document.addEventListener('DOMContentLoaded', () => {
     light.style.left = `${e.clientX}px`;
     light.style.top = `${e.clientY}px`;
   });
-
-  // --- Comment Form (as provided, assuming HTML elements exist) ---
+
   const commentForm = document.getElementById('comment-form');
   const commentList = document.getElementById('comment-list');
 
@@ -236,8 +227,7 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   }
-
-  // --- Carousel for Certifications ---
+
   const carouselTrack = document.querySelector('.carousel-track');
   const carouselItems = document.querySelectorAll('.carousel-track .certificate-item');
   const prevButton = document.querySelector('.carousel-button.prev');
@@ -300,7 +290,7 @@ document.addEventListener('DOMContentLoaded', () => {
       if (currentIndex > 0) {
         currentIndex -= itemsPerPage;
       } else {
-        currentIndex = Math.max(0, carouselItems.length - itemsPerPage); // Kembali ke akhir jika di awal
+        currentIndex = Math.max(0, carouselItems.length - itemsPerPage);
       }
       updateCarousel();
     });
@@ -320,11 +310,10 @@ document.addEventListener('DOMContentLoaded', () => {
     updateCarousel();
     createDots();
   });
-
-  // Inisialisasi carousel saat DOMContentLoaded
+
   if (carouselItems.length > 0 && carouselTrack && carouselDotsContainer) {
     updateCarousel();
     createDots();
   }
 
-}); // Ini adalah penutup yang benar untuk DOMContentLoaded
+});
